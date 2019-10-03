@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include<Windows.h>
 using namespace std;
 
 class Route
@@ -31,15 +32,26 @@ public:
 		string a = "";
 		string b = "";
 		int n = 0;
-		cout << "Enter A: ";
+		cout << "¬ведите A: ";
+
+		SetConsoleCP(1251);
 		cin >> a;
-		cout << endl << "Enter B: ";
+		SetConsoleCP(866);
+
+		cout << endl << "¬ведите B: ";
+
+		SetConsoleCP(1251);
 		cin >> b;
+		SetConsoleCP(866);
+
 		cout <<endl<< "¬ведите номер марштура: ";
+
+		SetConsoleCP(1251);
 		cin >> n;
+		SetConsoleCP(866);
+
 		cout << endl << endl;
 		route.add_route(a, b, n);
-		
 		return in;
 	}
 
